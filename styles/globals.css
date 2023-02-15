@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans&display=swap");
+
 /* GLOBAL */
 html,
 body {
@@ -10,7 +13,7 @@ body {
     color: #111717;
     min-height: 100vh;
     font-size: 16px;
-    font-family: "PT Sans", Arial, "Arial Unicode MS", Helvetica, Sans-Serif;
+    font-family: Helvetica, Sans-Serif;
 }
 
 #__next {
@@ -29,12 +32,20 @@ a:hover {
 
 h1 {
     margin: 0 0 0 0;
+    font-size: 29px;
+    font-family: PT Sans, Arial, "Arial Unicode MS", Helvetica, Sans-Serif;
+    color: #293131;
 }
 h2 {
     color: #37607b;
 }
 h3 {
     color: #6b9cbd;
+}
+h4,
+h5,
+h6 {
+    color: #293131;
 }
 p {
     margin: 0.5rem 0;
@@ -101,6 +112,7 @@ section {
     background: white;
     justify-content: center;
     position: relative;
+    box-shadow: 0 0 7px 4px rgb(0 0 0 / 30%);
 }
 
 nav {
@@ -252,9 +264,16 @@ footer p:nth-child(2) {
 #Doc .content {
     padding: 0;
 }
-#Doc p {
-    margin: 0.5rem;
+#Doc h2,
+#Doc h3,
+#Doc h4,
+#Doc h5 {
+    margin: 1.2rem 0.5rem;
 }
+#Doc p {
+    margin: 1rem 0.5rem;
+}
+
 #Doc ul {
     margin: 1rem;
 }
@@ -330,4 +349,11 @@ button {
 button:hover {
     background: #d5dbe0;
     cursor: pointer;
+}
+
+@media screen and (max-width: 740px) {
+    section {
+        min-width: auto;
+        width: 90%;
+    }
 }

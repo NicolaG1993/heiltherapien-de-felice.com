@@ -1,16 +1,60 @@
 import Image from "next/image";
-import Link from "next/link";
+import { useState } from "react";
 
 export default function Kontakt() {
+    const [formState, setFormState] = useState({
+        name: "",
+        email: "",
+        betreff: "",
+        inhalt: "",
+    });
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        console.log("SUBMIT INVOKED");
+    };
+
     return (
         <main id="Kontakt">
             <h1>Kontakt</h1>
             <div className="content">
-                <form>
-                    <input type="text" placeholder="Name*"></input>
-                    <input type="email" placeholder="E-Mail Adresse*"></input>
-                    <input type="text" placeholder="Betreff*"></input>
-                    <textarea placeholder="Inhalt*"></textarea>
+                <form onSubmit={(e) => handleSubmit(e)}>
+                    <input
+                        type="text"
+                        placeholder="Name*"
+                        onChange={(e) =>
+                            setFormState({ ...formState, name: e.target.value })
+                        }
+                    ></input>
+                    <input
+                        type="email"
+                        placeholder="E-Mail Adresse*"
+                        onChange={(e) =>
+                            setFormState({
+                                ...formState,
+                                email: e.target.value,
+                            })
+                        }
+                    ></input>
+                    <input
+                        type="text"
+                        placeholder="Betreff*"
+                        onChange={(e) =>
+                            setFormState({
+                                ...formState,
+                                betreff: e.target.value,
+                            })
+                        }
+                    ></input>
+                    <textarea
+                        placeholder="Inhalt*"
+                        onChange={(e) =>
+                            setFormState({
+                                ...formState,
+                                inhalt: e.target.value,
+                            })
+                        }
+                    ></textarea>
                     <button type="submit">Senden</button>
                 </form>
                 <div>

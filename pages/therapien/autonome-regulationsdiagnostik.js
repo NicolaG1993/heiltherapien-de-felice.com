@@ -151,7 +151,7 @@ export default function AutonomeRegulationsdiagnostik() {
                         Weise Möglichkeiten zur Narbenentstörung, zum Beispiel
                         durch Beklopfen von Akupunkturlinien, während die Narbe
                         gehalten wird und gleichzeitig zugeordente traumatische
-                        Umstände bildlich vorgestellt werden
+                        Umstände bildlich vorgestellt werden.
                     </p>
 
                     <h3>3. Ebene: Das Mentalfeld</h3>
