@@ -47,7 +47,7 @@ export default function Nav() {
 
             <nav id="MobileNav">
                 <div id="HamburgerBtn"></div>
-                <div className="list">
+                <div className="nav">
                     <Link href="/">Home</Link>
                     <Link
                         href="/therapien"
