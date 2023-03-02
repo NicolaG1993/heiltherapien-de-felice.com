@@ -8,7 +8,13 @@ export default function Footer() {
                 {" | "}
                 <Link href="/kontakt">Kontakt</Link>
                 {" | "}
-                <Link href="/impressum">by NGD</Link>
+                <a
+                    href="https://www.nicogdesign.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    by NGD
+                </a>
             </p>
             <p>
                 © Copyright {new Date().getFullYear()}

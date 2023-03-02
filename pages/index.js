@@ -5,7 +5,7 @@ import { Inter } from "@next/font/google";
 export default function Home() {
     return (
         <main id="Home">
-            <h1>De Felice Heiltherapien</h1>
+            <h1>De Felice Ganzheitliche Therapieformen</h1>
             <div className="content">
                 <div className="image-box" style={{ background: "#41555893" }}>
                     <Image
@@ -20,11 +20,14 @@ export default function Home() {
                 </div>
                 <div className="text-wrap">
                     <ul>
-                        <li>
+                        {/* <li>
                             Langjährige Tätigkeit im medizinischen Bereich, als
                             Medizinisch-technische Laborassistentin, Lehr-MTA
+                        </li> */}
+                        <li>
+                            Heilpraktikerin, Medizinisch technische
+                            Laborassistentin in leitenden Funktionen, Lehr-MTA
                         </li>
-                        <li>Heilpraktikerin seit 2007</li>
                         <li>
                             Praxistätigkeit als Therapeutin für Autonome
                             Regulationsdiagnostik und Psychokinesiologie,

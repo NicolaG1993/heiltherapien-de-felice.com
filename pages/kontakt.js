@@ -58,8 +58,8 @@ export default function Kontakt() {
                     <button type="submit">Senden</button>
                 </form>
                 <div>
-                    <div className="image-box">
-                        <Image
+                    {/*<div className="image-box">
+                         <Image
                             src={"/assets/Therapie Punkt.jpg"}
                             alt={"Wieslocher Institut für systemische Lösungen"}
                             fill
@@ -67,18 +67,24 @@ export default function Kontakt() {
                                 objectFit: "cover",
                             }}
                         />
-                    </div>
+                    </div> */}
                     <div>
-                        <p>Angelika De Felice</p>
+                        <p>
+                            <strong>Angelika De Felice</strong>
+                        </p>
                         <br />
-                        <p>66557 Illingen-Hüttigweiler</p>
-                        <p>Jakobstraße 51-53</p>
+                        <p>co/ Praxisgemeinschaft Knauf - Meier</p>
+                        <p>Grossherzog-Friedrich-Strasse 72</p>
+                        <p>66121 Saarbrücken</p>
                         <a
-                            href="mailto:info@heiltherapien-de-felice.com"
+                            href="mailto:adefelice@t-online.de"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            info@heiltherapien-de-felice.com
+                            adefelice@t-online.de
+                        </a>
+                        <a href="tel:+491729980562">
+                            <p>+49 172 99 805 62</p>
                         </a>
                     </div>
                 </div>
