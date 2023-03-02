@@ -28,7 +28,9 @@ export default function Therapien() {
                         </Link>
                     </li>
                     <li>
-                        <Link href="/therapien/reiki">Reiki</Link>
+                        <Link href="/therapien/energiearbeit">
+                            Energiearbeit
+                        </Link>
                     </li>
                 </ul>
             </div>

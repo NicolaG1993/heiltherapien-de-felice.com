@@ -45,7 +45,9 @@ export default function Layout({ children }) {
                             <Link href="/therapien/systemische-familienaufstellung">
                                 Systemische Familienaufstellung
                             </Link>
-                            <Link href="/therapien/reiki">Reiki</Link>
+                            <Link href="/therapien/energiearbeit">
+                                Energiearbeit
+                            </Link>
                         </div>
                     )}
                 </nav>

@@ -1,22 +1,45 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Reiki() {
+export default function Energiearbeit() {
     return (
         <main id="Doc">
-            <h1>Reiki</h1>
+            <h1>Energiearbeit </h1>
             <div className="content">
-                <div className="image-box right">
-                    <Image
-                        src={"/assets/chakras.png"}
-                        alt={"Reiki"}
-                        fill
-                        style={{
-                            objectFit: "contain",
-                        }}
-                    />
+                <div>
+                    <div
+                        className="image-box right"
+                        style={{ marginBottom: "2rem" }}
+                    >
+                        <Image
+                            src={"/assets/chakras.png"}
+                            alt={"Energiearbeit "}
+                            fill
+                            style={{
+                                objectFit: "contain",
+                            }}
+                        />
+                    </div>
+                    <p>
+                        Energiearbeit begleitet die Therapie. Sie bringt Körper,
+                        Geist und Seele ins Gleichgewicht, wirkt somit auf allen
+                        Ebenen. Wandlung und spirituelles Wachstum werden
+                        angestrebt
+                    </p>
+                    <p>
+                        <strong>
+                            <a
+                                href="https://www.deltacure.eu"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+                                siehe deltacure.eu
+                            </a>
+                        </strong>
+                    </p>
                 </div>
-                <p>
+
+                {/* <p>
                     Eine sehr alte Heilkunst, die in Japan im 19. Jahrhundert
                     von Dr. Mikao Usui, einem christlichen Mönch, wiederentdeckt
                     wurde. Die Tradition des Reiki wird bereits in 2500 Jahren
@@ -44,7 +67,7 @@ export default function Reiki() {
                     Reiki bringt Körper und Geist ins Gleichgewicht, wirkt auf
                     allen Ebenen. Durch Reiki erfährt man spirituelles Wachstum,
                     Umwandlung und geistige Segnungen.
-                </p>
+                </p> */}
             </div>
         </main>
     );

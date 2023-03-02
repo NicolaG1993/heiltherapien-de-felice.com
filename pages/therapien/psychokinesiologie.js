@@ -8,10 +8,10 @@ export default function Psychokinesiologie() {
             <div className="content">
                 <div
                     className="image-box right"
-                    style={{ background: "#41555893" }}
+                    // style={{ background: "#41555893" }}
                 >
                     <Image
-                        src={"/assets/Psychokinesiologie.jpg"}
+                        src={"/assets/labyrinth.png"}
                         alt={"Psychokinesiologie"}
                         fill
                         style={{

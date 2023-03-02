@@ -23,6 +23,7 @@ body {
 }
 
 a {
+    cursor: pointer;
     text-decoration: none;
     color: #111717;
 }
@@ -97,10 +98,11 @@ header > div {
     min-width: 700px;
     max-width: 1728px;
 }
-header > div > div {
+header > div > a {
     position: relative;
     height: 100%;
     left: -15px;
+    display: block;
 }
 
 section {
@@ -151,7 +153,7 @@ nav a {
 }
 
 main {
-    padding: 2rem;
+    padding: 2rem 2rem 3rem 2rem;
 }
 
 footer {
@@ -283,16 +285,31 @@ footer p:nth-child(2) {
     flex-direction: column;
     align-items: center;
 }
-#Links > .content > .caption-box {
-    margin-top: 2rem;
+#Links .linkWrap:nth-child(2) {
+    margin-top: 3rem;
 }
-#Links > .content > .caption-box:nth-child(1) {
-    margin-top: 0;
+#Links .linkWrap p {
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
+#Seminare .content > div:nth-child(1) {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    margin-bottom: 5rem;
+}
+#Seminare .content > div:nth-child(2) {
+    text-align: center;
 }
 
 #Impressum .content {
     display: flex;
     justify-content: space-between;
+    max-width: 850px;
+}
+#Impressum .content > div > a:last-child > p {
+    margin-bottom: 0;
 }
 #Impressum .image-box {
     width: 300px;
