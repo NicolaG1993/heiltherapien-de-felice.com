@@ -2,6 +2,13 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Sans&display=swap");
 
 /* GLOBAL */
+
+:root {
+    --colorA: #bad6e5;
+    --colorB: #6a93b0;
+    --colorC: rgb(25, 70, 112);
+    --colorD: rgb(45, 98, 148);
+}
 html,
 body {
     padding: 0;
@@ -9,7 +16,8 @@ body {
 }
 
 body {
-    background: #6b9cbd;
+    /* background: #6b9cbd; */
+    background: var(--colorA);
     color: #111717;
     min-height: 100vh;
     font-size: 16px;
@@ -28,7 +36,8 @@ a {
     color: #111717;
 }
 a:hover {
-    color: #74a099;
+    /* color: #74a099; */
+    color: var(--colorB);
 }
 
 h1 {
@@ -41,7 +50,8 @@ h2 {
     color: #37607b;
 }
 h3 {
-    color: #6b9cbd;
+    /* color: #6b9cbd; */
+    color: var(--colorA);
 }
 h4,
 h5,
@@ -79,14 +89,23 @@ li::before {
 header {
     height: 250px;
     width: 100%;
+    /* background: var(--colorB); */
     background: linear-gradient(
+                to bottom,
+                var(--colorB) 0,
+                var(--colorB) 99px,
+                var(--colorB) 310px
+            )
+            no-repeat,
+        var(--colorB);
+    /* background: linear-gradient(
                 to bottom,
                 #689abb 0,
                 #4f89b0 99px,
                 #37607b 310px
             )
             no-repeat,
-        #6b9cbd;
+        #6b9cbd; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -117,8 +136,17 @@ section {
     box-shadow: 0 0 7px 4px rgb(0 0 0 / 30%);
 }
 
+#DesktopNav {
+    /* display: block; */
+    visibility: visible;
+}
+#MobileNav {
+    display: none;
+    visibility: hidden;
+}
 nav {
-    background: #293638;
+    background: var(--colorC);
+    /* background: #293638; */
     display: flex;
     align-content: center;
     justify-content: flex-end;
@@ -160,7 +188,9 @@ footer {
     color: #c9d9d9;
     margin-top: 1rem;
     padding: 1rem;
-    background: linear-gradient(to bottom, #0f1415 0, #415558 100%) no-repeat;
+    /* background: linear-gradient(to bottom, #0f1415 0, #415558 100%) no-repeat; */
+    background: linear-gradient(to bottom, var(--colorC) 0, var(--colorD) 100%)
+        no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -372,5 +402,13 @@ button:hover {
     section {
         min-width: auto;
         width: 90%;
+    }
+    #DesktopNav {
+        display: none;
+        visibility: hidden;
+    }
+    #MobileNav {
+        display: block;
+        visibility: visible;
     }
 }
