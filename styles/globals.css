@@ -44,14 +44,16 @@ h1 {
     margin: 0 0 0 0;
     font-size: 29px;
     font-family: PT Sans, Arial, "Arial Unicode MS", Helvetica, Sans-Serif;
-    color: #293131;
+    /* color: #293131; */
+    color: #37607b;
 }
 h2 {
     color: #37607b;
 }
 h3 {
     /* color: #6b9cbd; */
-    color: var(--colorA);
+    /* color: var(--colorA); */
+    color: #525a5a;
 }
 h4,
 h5,
@@ -295,6 +297,11 @@ footer p:nth-child(2) {
     padding: 0 1rem;
 }
 
+#Home h1 {
+    /* color: #37607b; */
+    font-weight: 900;
+    font-size: 2rem;
+}
 #Home > div {
     display: flex;
 }
