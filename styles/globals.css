@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
-@import url("https://fonts.googleapis.com/css?family=PT+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Muli:100,200,300,400,500,600,700,800,900");
+@import url("https://fonts.googleapis.com/css?family=PT+Sans:100,200,300,400,500,600,700,800,900");
 
 /* GLOBAL */
 
@@ -299,8 +299,10 @@ footer p:nth-child(2) {
 
 #Home h1 {
     /* color: #37607b; */
-    font-weight: 900;
-    font-size: 2rem;
+    font-weight: 800;
+    font-size: 3rem;
+    margin-bottom: 3rem;
+    /* text-align: center; */
 }
 #Home > div {
     display: flex;
