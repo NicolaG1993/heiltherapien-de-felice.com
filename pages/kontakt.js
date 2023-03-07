@@ -68,7 +68,7 @@ export default function Kontakt() {
                             }}
                         />
                     </div> */}
-                    <div>
+                    {/* <div>
                         <p>
                             <strong>Angelika De Felice</strong>
                         </p>
@@ -86,7 +86,7 @@ export default function Kontakt() {
                         <a href="tel:+491729980562">
                             <p>+49 172 99 805 62</p>
                         </a>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </main>
