@@ -31,7 +31,7 @@ export default function Impressum() {
                     <p>
                         <strong>Angelika De Felice</strong>
                     </p>
-                    <p>co/ Praxisgemeinschaft Knauf - Meier</p>
+                    <p>c/o Praxisgemeinschaft Knauf - Meier</p>
                     <p>Grossherzog-Friedrich-Strasse 72</p>
                     <br />
                     <p>66121 Saarbrücken</p>

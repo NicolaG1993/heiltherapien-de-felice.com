@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css?family=PT+Sans:100,200,300,400,500,600,700,800,900");
 
 /* GLOBAL */
-
 :root {
     --colorA: #bad6e5;
     --colorB: #6a93b0;
@@ -146,40 +145,17 @@ nav {
     justify-content: flex-end;
     margin-bottom: 1rem;
 }
-nav a {
+nav a,
+nav p {
     line-height: 3rem;
     padding: 0 17px;
     color: #c9d9d9;
+    margin: 0;
 }
 #DesktopNav {
     /* display: block; */
     visibility: visible;
 }
-#MobileNav {
-    display: none;
-    visibility: hidden;
-    position: relative;
-    width: 100%;
-    min-height: 46px;
-}
-#HamburgerBtn {
-    height: 40px;
-    width: 40px;
-    background: var(--colorA);
-    position: absolute;
-    right: 3px;
-    top: 3px;
-}
-#MobileNav .nav {
-    width: 100%;
-    /* height: 0px; */
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    background: var(--colorD);
-    margin-top: 46px;
-}
-
 #List {
     position: absolute;
     top: 48px;
@@ -201,6 +177,53 @@ nav a {
 #List a:hover {
     color: black;
     background: #cad9e0;
+}
+
+#MobileNav {
+    display: none;
+    visibility: hidden;
+    position: relative;
+    width: 100%;
+    min-height: 46px;
+    transition: 0.2s ease;
+}
+#HamburgerBtn {
+    height: 40px;
+    width: 40px;
+    background: var(--colorA);
+    position: absolute;
+    right: 3px;
+    top: 3px;
+}
+#MobileNav .nav {
+    width: 100%;
+    /* height: 0px; */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: var(--colorD);
+    margin-top: 46px;
+    transition: 0.35s ease-out;
+    max-height: 0;
+}
+#MobileNav .openNav {
+    max-height: 400px; /* important! for nav animation*/
+}
+#MobileNav .openNavMax {
+    max-height: 600px; /* important! for nav animation*/
+}
+#MobileList {
+    padding: 0 1rem;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: var(--colorB);
+}
+#MobileList a {
+    /* padding-left: 2rem; */
+}
+#MobileList a:hover {
 }
 
 main {
@@ -243,7 +266,7 @@ footer p:nth-child(2) {
 }
 .left {
     float: left;
-    width: 50%;
+    /* width: 50%; */
     max-width: 500px;
     height: 500px;
     margin-right: 1em;
@@ -296,7 +319,9 @@ footer p:nth-child(2) {
     margin: 2rem 0 0 0;
     padding: 0 1rem;
 }
-
+#Home {
+    min-height: 440px;
+}
 #Home h1 {
     /* color: #37607b; */
     font-weight: 800;
@@ -305,7 +330,8 @@ footer p:nth-child(2) {
     /* text-align: center; */
 }
 #Home > div {
-    display: flex;
+    /* display: flex; */
+    /* position: relative; */
 }
 #Home .image-box {
     min-width: 225px;
@@ -321,6 +347,9 @@ footer p:nth-child(2) {
     padding: 0.5rem 0.8rem 0.5rem 2.5rem;
     max-width: 400px;
     font-style: italic;
+    /* justify-self: flex-end; */
+    /* position: relative; */
+    margin-left: 280px;
 }
 
 #Doc .content {
@@ -429,9 +458,18 @@ button:hover {
 }
 
 @media screen and (max-width: 740px) {
+    body {
+        font-size: 14px;
+    }
     section {
         min-width: auto;
         width: 90%;
+    }
+    main {
+        padding: 1rem 1rem 3rem 1rem;
+    }
+    header > div {
+        min-width: auto;
     }
     #DesktopNav {
         display: none;
@@ -440,5 +478,35 @@ button:hover {
     #MobileNav {
         display: flex;
         visibility: visible;
+    }
+
+    #Home .image-box {
+        min-width: 190px;
+        height: 320px;
+        margin-right: 2rem;
+        margin-bottom: 3rem;
+    }
+    #Home .quote-wrap {
+        margin-left: auto;
+        clear: both;
+    }
+
+    #Seminare .content > div:nth-child(1) {
+        height: 500px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    #Seminare .content > div:nth-child(1) {
+        height: 400px;
+    }
+
+    #Impressum .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #Impressum .content > div:nth-child(1) {
+        margin-bottom: 2rem;
     }
 }
