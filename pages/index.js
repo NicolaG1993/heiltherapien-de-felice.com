@@ -44,7 +44,7 @@ export default function Home() {
                     <li>
                         Therapeutin für Systemische Familienaufstellung mit
                         erweitertem Zertifikat (Wieslocher Institut für
-                        systemische Lösungen – wisl)
+                        systemische Lösungen – WISL)
                     </li>
                 </ul>
                 <div className="quote-wrap">
