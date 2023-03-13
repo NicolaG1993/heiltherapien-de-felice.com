@@ -352,10 +352,13 @@ footer p:nth-child(2) {
     background: #e0ebf0 url(/assets/postquote.png) no-repeat scroll;
     padding: 0.5rem 0.8rem 0.5rem 2.5rem;
     max-width: 400px;
-    font-style: italic;
+
     /* justify-self: flex-end; */
     /* position: relative; */
     margin-left: 280px;
+}
+#Home .quote-wrap > p:first-child {
+    font-style: italic;
 }
 
 #Doc .content {
@@ -375,6 +378,13 @@ footer p:nth-child(2) {
     margin: 1rem;
 }
 
+#Literatur li {
+    padding: 10px 10px 10px 15px;
+}
+#Literatur li::before {
+    margin-left: -22px;
+    margin-right: 15px;
+}
 #Links > .content {
     display: flex;
     flex-direction: column;
