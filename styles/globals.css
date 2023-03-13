@@ -226,6 +226,7 @@ nav p {
     /* padding-left: 2rem; */
 }
 #MobileList a:hover {
+    color: var(--colorD);
 }
 
 main {
