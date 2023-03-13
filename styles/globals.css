@@ -186,14 +186,16 @@ nav p {
     width: 100%;
     min-height: 46px;
     transition: 0.2s ease;
+    align-items: center;
 }
 #HamburgerBtn {
-    height: 40px;
-    width: 40px;
-    background: var(--colorA);
+    /* height: 40px; */
+    /* width: 40px; */
+    /* background: var(--colorA); */
     position: absolute;
-    right: 3px;
-    top: 3px;
+    /* right: 3px; */
+    top: 11px;
+    margin-right: 0.75rem;
 }
 #MobileNav .nav {
     width: 100%;
@@ -497,6 +499,19 @@ button:hover {
 }
 
 @media screen and (max-width: 560px) {
+    #Home h1 {
+        font-size: 29px;
+    }
+    .left,
+    .right {
+        float: none;
+    }
+    .image-box {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+    }
+
     #Seminare .content > div:nth-child(1) {
         height: 400px;
     }

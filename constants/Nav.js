@@ -1,3 +1,4 @@
+import HamburgerButton from "@/components/HamburgerButton/HamburgerButton";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -53,10 +54,14 @@ export default function Nav() {
             </nav>
 
             <nav id="MobileNav">
-                <div
-                    id="HamburgerBtn"
-                    onClick={() => setMobileNav((mobileNav) => !mobileNav)}
-                ></div>
+                <div id="HamburgerBtn">
+                    <HamburgerButton
+                        toggleNav={() =>
+                            setMobileNav((mobileNav) => !mobileNav)
+                        }
+                        status={mobileNav}
+                    />
+                </div>
 
                 <div
                     className={`nav ${
