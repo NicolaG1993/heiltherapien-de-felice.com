@@ -1,9 +1,15 @@
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Links() {
     return (
         <main id="Links">
+            <Head>
+                <title>Links</title>
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Links" />
+            </Head>
             <h1>Links</h1>
             <div className="content">
                 <div className="linkWrap">

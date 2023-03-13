@@ -1,9 +1,16 @@
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Energiearbeit() {
     return (
         <main id="Doc">
+            <Head>
+                <title>Energiearbeit</title>
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Energiearbeit" />
+            </Head>
+
             <h1>Energiearbeit </h1>
             <div className="content">
                 <div>

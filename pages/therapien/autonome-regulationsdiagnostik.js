@@ -1,9 +1,18 @@
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function AutonomeRegulationsdiagnostik() {
     return (
         <main id="Doc">
+            <Head>
+                <title>Autonome Regulationsdiagnostik</title>
+                <meta property="og:type" content="website" />
+                <meta
+                    property="og:title"
+                    content="Autonome Regulationsdiagnostik"
+                />
+            </Head>
             <h1>Autonome Regulationsdiagnostik</h1>
             <div className="content">
                 <div>

@@ -1,9 +1,19 @@
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Reiki() {
     return (
         <main id="Doc">
+            <Head>
+                <title>Systemische Familienaufstellung</title>
+                <meta property="og:type" content="website" />
+                <meta
+                    property="og:title"
+                    content="Systemische Familienaufstellung"
+                />
+            </Head>
+
             <h1>Systemische Familienaufstellung</h1>
             <div className="content">
                 <div className="image-box right">

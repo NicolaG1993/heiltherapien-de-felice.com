@@ -1,9 +1,15 @@
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Impressum() {
     return (
         <main id="Impressum">
+            <Head>
+                <title>Impressum</title>
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Impressum" />
+            </Head>
             <h1>Impressum</h1>
             <div className="content">
                 <div>

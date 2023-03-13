@@ -1,9 +1,15 @@
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Literatur() {
     return (
         <main id="Literatur">
+            <Head>
+                <title>Literatur</title>
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Literatur" />
+            </Head>
             <h1>Literatur</h1>
             <div className="content">
                 <ul>

@@ -1,9 +1,16 @@
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Psychokinesiologie() {
     return (
         <main id="Doc">
+            <Head>
+                <title>Psychokinesiologie</title>
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Psychokinesiologie" />
+            </Head>
+
             <h1>Psychokinesiologie</h1>
             <div className="content">
                 <div

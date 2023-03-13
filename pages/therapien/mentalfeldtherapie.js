@@ -1,9 +1,16 @@
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Mentalfeldtherapie() {
     return (
         <main id="Doc">
+            <Head>
+                <title>Mentalfeldtherapie</title>
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Mentalfeldtherapie" />
+            </Head>
+
             <h1>Mentalfeldtherapie</h1>
             <div className="content">
                 <div className="image-box right">

@@ -1,9 +1,15 @@
 // import Image from "next/image";
+import Head from "next/head";
 import Link from "next/link";
 
 export default function Therapien() {
     return (
         <main>
+            <Head>
+                <title>Therapien</title>
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Therapien" />
+            </Head>
             <h1>Therapien</h1>
             <div className="content">
                 <ul>

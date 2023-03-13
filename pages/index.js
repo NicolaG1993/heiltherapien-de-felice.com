@@ -5,6 +5,17 @@ import { Inter } from "@next/font/google";
 export default function Home() {
     return (
         <main id="Home">
+            <Head>
+                <title>
+                    Heiltherapien De Felice • Ganzheitliche Therapieformen
+                </title>
+                <meta property="og:type" content="website" />
+                <meta
+                    property="og:title"
+                    content="Heiltherapien De Felice • Ganzheitliche Therapieformen"
+                />
+            </Head>
+
             <h1>Ganzheitliche Therapieformen</h1>
             <div className="content">
                 <div

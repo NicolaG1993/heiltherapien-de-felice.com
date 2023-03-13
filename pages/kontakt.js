@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -16,6 +17,11 @@ export default function Kontakt() {
 
     return (
         <main id="Kontakt">
+            <Head>
+                <title>Kontakt</title>
+                <meta property="og:type" content="website" />
+                <meta property="og:title" content="Kontakt" />
+            </Head>
             <h1>Kontakt</h1>
             <div className="content">
                 <form onSubmit={(e) => handleSubmit(e)}>
