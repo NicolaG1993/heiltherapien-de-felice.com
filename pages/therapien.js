@@ -6,7 +6,7 @@ export default function Therapien() {
     return (
         <main>
             <Head>
-                <title>Therapien</title>
+                <title>Ganzheitliche Therapieformen</title>
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="Therapien" />
             </Head>

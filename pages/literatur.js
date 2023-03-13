@@ -14,32 +14,46 @@ export default function Literatur() {
             <div className="content">
                 <ul>
                     <li>
-                        “Doktor Chlorella! Die Alge fürs Leben – Kompendium zur
-                        Mikroalge Chlorella”, REMERC & LHEIW Verlagskontor, 2007
+                        Dr. Frank Liebke: „Doktor Chlorella! Die Alge fürs
+                        Leben. Kompendium zur Mikroalge Chlorella“, Remerc &
+                        Lheiw Verlagskontor, 2007.
                     </li>
                     <li>
-                        “Amalgam – Risiko für die Menschheit”, Dr. med. J.
-                        Mutter
+                        Dr. Joachim Mutter: „Amalgam-Risiko für die Menschheit“,
+                        Fit fürs Leben Verlag, Weil der Stadt 2018.
                     </li>
                     <li>
-                        “Biophotonen – Neue Horizonte der Medizin: Von den
-                        Grundlagen der Biophotonik, Fritz Albert Popp, Haug
-                        Verlag
+                        Fritz Albert Popp: „Biophotonen-Neue Horizonte der
+                        Medizin: Von den Grundlagen der Biophotonik“, Haug
+                        Verlag, Stuttgart 2006.
                     </li>
                     <li>
-                        “Stress durch Strom und Strahlung”, Wolfgang Mees ISBN
-                        3-923531-25-7
+                        Wolfgang Maes: „Stress durch Strom und Strahlung“, 6.
+                        Auflage, Institut für Baubiologie + Nachhaltigkeit,
+                        Rosenheim 2013.
                     </li>
                     <li>
-                        “Handbuch der Mentalfeldtechniken”, Dr.med. D.
-                        Klinghardt, Amelie Schmeer-Maurer
+                        Dr.med. D. Klinghardt, Amelie Schmeer-Maurer: „Handbuch
+                        der MentalfeldTechniken“, VAK Verlag, Kirchzarten bei
+                        Freiburg 2009.
                     </li>
                     <li>
-                        “Auf die Seele schauen” – Spirituelle Psychotherapie,
-                        Hunter Beaumont
+                        Hunter Beaumont: „Auf die Seele schauen: Spirituelle
+                        Psychotherapie“, Kösel-Verlag, München 2008.
                     </li>
-                    <li>“Zweierlei Glück”, Gunthard Weber</li>
-                    <li>“Familiengeheimnisse”, John Bradshaw</li>
+                    <li>
+                        Gunthard Weber (Hrsg.): „Zweierlei Glück. Das klassische
+                        Familienstellen Bert Hellingers“, 18. Auflage, Carl-Auer
+                        Verlag, Heidelberg 2017.
+                    </li>
+                    <li>
+                        John Bradshaw: „Familiengeheimnisse. Warum es sich lohnt
+                        ihnen auf die Spur zu kommen“, Goldmann, München 2014.
+                    </li>
+                    <li>
+                        Colin C. Tipping: „Ich vergebe: Der radikale Abschied
+                        vom Opferdasein“, J. Kamphausen, Bielefeld 2010.{" "}
+                    </li>
                 </ul>
             </div>
         </main>

@@ -16,7 +16,7 @@ export default function Home() {
                 />
             </Head>
 
-            <h1>Ganzheitliche Therapieformen</h1>
+            {/* <h1>Ganzheitliche Therapieformen</h1> */}
             <div className="content">
                 <div
                     className="image-box left"
