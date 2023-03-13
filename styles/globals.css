@@ -323,7 +323,10 @@ footer p:nth-child(2) {
     padding: 0 1rem;
 }
 #Home {
-    min-height: 440px;
+    min-height: 300px;
+}
+#Home .content {
+    margin: 0;
 }
 #Home h1 {
     /* color: #37607b; */

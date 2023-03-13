@@ -33,7 +33,7 @@ export default function Literatur() {
                         Rosenheim 2013.
                     </li>
                     <li>
-                        Dr.med. D. Klinghardt, Amelie Schmeer-Maurer: „Handbuch
+                        Dr. med. D. Klinghardt, Amelie Schmeer-Maurer: „Handbuch
                         der MentalfeldTechniken“, VAK Verlag, Kirchzarten bei
                         Freiburg 2009.
                     </li>
