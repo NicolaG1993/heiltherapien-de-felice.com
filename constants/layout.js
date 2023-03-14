@@ -9,7 +9,10 @@ export default function Layout({ children }) {
     return (
         <>
             <Head>
-                <meta name="keywords" content="" />
+                <meta
+                    name="keywords"
+                    content="Familienaufstellung, Systemische Aufstellung, Therapien, Ganzheitliche Therapieformen, Heiltherapien, Angelika De Felice"
+                />
                 <meta name="description" content="" />
 
                 <meta property="og:description" content="" />
