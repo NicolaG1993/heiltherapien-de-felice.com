@@ -38,7 +38,7 @@ export default function Home() {
                     <li>
                         Praxistätigkeit als Therapeutin für Autonome
                         Regulationsdiagnostik und Psychokinesiologie,
-                        Mentalfeldtherapie nach Dr. Klinghardt ( Institut für
+                        Mentalfeldtherapie nach Dr. Klinghardt (Institut für
                         Neurobiologie, Dr. Klinghardt – INK)
                     </li>
                     <li>
