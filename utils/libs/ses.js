@@ -7,9 +7,17 @@ const SES = new aws.SES({
 
 export default SES;
 
-export function contactUs({ recipient, source, message, subject, name }) {
+export function contactUs({
+    recipient,
+    source,
+    email,
+    message,
+    subject,
+    name,
+}) {
     return SES.sendEmail({
         Source: source,
+        // Source: recipient,
         Destination: {
             ToAddresses: [recipient],
         },
@@ -22,7 +30,7 @@ export function contactUs({ recipient, source, message, subject, name }) {
                                 <body>
                                     Name: ${name}
                                     <br />
-                                    Email: ${recipient}
+                                    Email: ${email}
                                     <br />
                                     <br />
                                     Inhalt: ${message}

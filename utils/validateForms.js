@@ -36,9 +36,11 @@ const emailValidation = (email) => {
         return null;
     }
     if (email.trim() === "") {
-        return "È richiesta un'email";
+        return "Pflichtfeld";
+        // return "È richiesta un'email";
     }
-    return "Perfavore inserisci un'email valida";
+    return "Bitte geben Sie eine gültige Email-Adresse ein";
+    // return "Perfavore inserisci un'email valida";
 };
 
 const passwordValidation = (password) => {
@@ -74,6 +76,9 @@ const requestedValue = (fieldValue) => {
 const textValidation = (fieldValue) => {
     if (fieldValue.trim() === "") {
         return `Devi scrivere qualcosa`;
+    }
+    if (fieldValue.trim().length < 6) {
+        return "Il contenuto é troppo corto";
     }
     return null;
 };

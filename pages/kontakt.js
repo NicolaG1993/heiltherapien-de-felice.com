@@ -90,7 +90,7 @@ export default function Kontakt() {
             }
         }
         if (key === "betreff") {
-            const resp = titleValidation(value);
+            const resp = titleValidation(key, value);
             if (resp) {
                 newErrObj[key] = resp;
             } else {
@@ -124,10 +124,13 @@ export default function Kontakt() {
             return (
                 <>
                     <div className="success">
-                        <p>Messaggio inviato!</p>
+                        <p>✔ Nachricht gesendet</p>
                     </div>
-                    <p onClick={backStep} style={{ cursor: "pointer" }}>
-                        Torna indietro
+                    <p
+                        onClick={backStep}
+                        style={{ cursor: "pointer", fontWeight: "bold" }}
+                    >
+                        Züruck
                     </p>
                 </>
             );
@@ -136,18 +139,22 @@ export default function Kontakt() {
                 <>
                     <div className="error">
                         <p>
-                            Sembra esserci un errore, non abbiamo ricevuto
-                            questo messaggio. Riprova o contattaci direttamente
-                            via email o via telefono.
+                            Es scheint ein Fehler vorzuliegen, wir haben diese
+                            Nachricht nicht erhalten. Versuchen Sie es erneut
+                            oder kontaktieren Sie uns direkt per E-Mail oder
+                            Telefon.
                         </p>
                     </div>
-                    <p onClick={backStep} style={{ cursor: "pointer" }}>
-                        Torna indietro
+                    <p
+                        onClick={backStep}
+                        style={{ cursor: "pointer", fontWeight: "bold" }}
+                    >
+                        Züruck
                     </p>
                 </>
             );
         } else {
-            return <div className="loader">Attendere, invio in corso...</div>;
+            return <div className="loader">Senden, bitte warten...</div>;
         }
     };
 
@@ -180,6 +187,7 @@ export default function Kontakt() {
                             placeholder="Name*"
                             name="name"
                             id="Name"
+                            required
                             onChange={(e) =>
                                 setFormState({
                                     ...formState,
@@ -190,11 +198,16 @@ export default function Kontakt() {
                                 validateData(e.target.name, e.target.value)
                             }
                         ></input>
+                        {errors.name && (
+                            <div className={"form-error"}>• Pflichtfeld</div>
+                        )}
+
                         <input
                             type="email"
                             placeholder="E-Mail Adresse*"
                             name="email"
                             id="Email"
+                            required
                             onChange={(e) =>
                                 setFormState({
                                     ...formState,
@@ -205,11 +218,16 @@ export default function Kontakt() {
                                 validateData(e.target.name, e.target.value)
                             }
                         ></input>
+                        {errors.email && (
+                            <div className={"form-error"}>• {errors.email}</div>
+                        )}
+
                         <input
                             type="text"
                             placeholder="Betreff*"
                             name="betreff"
                             id="Betreff"
+                            required
                             onChange={(e) =>
                                 setFormState({
                                     ...formState,
@@ -220,17 +238,29 @@ export default function Kontakt() {
                                 validateData(e.target.name, e.target.value)
                             }
                         ></input>
+                        {errors.betreff && (
+                            <div className={"form-error"}>• Pflichtfeld</div>
+                        )}
+
                         <textarea
                             placeholder="Inhalt*"
                             name="inhalt"
                             id="Inhalt"
+                            required
                             onChange={(e) =>
                                 setFormState({
                                     ...formState,
                                     inhalt: e.target.value,
                                 })
                             }
+                            onBlur={(e) =>
+                                validateData(e.target.name, e.target.value)
+                            }
                         ></textarea>
+                        {errors.inhalt && (
+                            <div className={"form-error"}>• Inhalt zu kurz</div>
+                        )}
+
                         <button type="submit">Senden</button>
                     </form>
                 )}

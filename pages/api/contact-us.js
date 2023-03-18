@@ -7,7 +7,12 @@ export default async function handler(req, res) {
             const { name, email, betreff, inhalt } = body;
             let emailData = {
                 name: name,
-                recipient: email,
+                recipient: "adefelice@t-online.de",
+                // source: email,
+                email: email,
+                // source: `${name} <${email}>`,
+                // recipient: email,
+                // source: "Heiltherapien De Felice <nicog.designer@gmail.com>",
                 source: "Heiltherapien De Felice <adefelice@t-online.de>",
                 subject: betreff,
                 message: inhalt,
