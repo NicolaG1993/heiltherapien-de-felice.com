@@ -23,7 +23,7 @@ export default function Home() {
                     style={{ background: "#41555893" }}
                 >
                     <Image
-                        src={"/assets/portrait.png"}
+                        src={"/assets/portrait.jpeg"}
                         alt={"Portrait"}
                         fill
                         style={{
