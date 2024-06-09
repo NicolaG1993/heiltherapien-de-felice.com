@@ -2,6 +2,36 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
+const events = [
+    {
+        title: "Systemische Aufstellungsarbeit",
+        day: "Samstag",
+        date: "22.06.2024",
+        location: {
+            venue: "EPI Park Seminar",
+            venueSubTitle: "Schweizerische Epilepsie-Stiftung",
+            building: "Park Raum 5",
+            address: "Bleulerstrasse 60",
+            plz: "8008",
+            city: "Zürich",
+        },
+        email: "angelicadefelice@hispeed.ch",
+    },
+    {
+        title: "Systemische Aufstellungsarbeit",
+        day: "Sonntag",
+        date: "09.06.2024",
+        location: {
+            venue: "Praxis für Gesundheitsfürsorge",
+            building: "Simone Tomasetti-Freymann",
+            address: "Feldmannstraße 108",
+            plz: "66119",
+            city: "Saarbrücken",
+        },
+        email: "adefelice@t-online.de",
+    },
+];
+
 export default function Seminare() {
     return (
         <main id="Seminare">
@@ -22,10 +52,58 @@ export default function Seminare() {
                         }}
                     />
                 </div>
-                {/* <div className="no-events">
-                    <h2>Termine werden bekannt gegeben.</h2>
-                </div> */}
-                <div className="events">
+
+                {!!events.length ? (
+                    <div className="events">
+                        {events.map((ev) => (
+                            <div key={"event " + ev.date} className="event">
+                                <div className="event-info">
+                                    <p>
+                                        <b>{ev.title}</b>{" "}
+                                        <i>
+                                            am {ev.day}, den {ev.date}:
+                                        </i>
+                                    </p>
+                                    <div className="location">
+                                        <p>Ort:</p>
+                                        <div>
+                                            <p>
+                                                <b>
+                                                    <i>{ev.location.venue}</i>
+                                                </b>{" "}
+                                                {ev.location.venueSubTitle &&
+                                                    `(${ev.location.venueSubTitle})`}
+                                            </p>
+                                            <p>{ev.location.building}</p>
+                                            <p>{ev.location.address}</p>
+                                            <p>
+                                                {ev.location.plz}{" "}
+                                                {ev.location.city}
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p>
+                                        Weitere Informationen bei Anmeldung
+                                        unter:{" "}
+                                        <b>
+                                            <a href={`mailto:${ev.email}`}>
+                                                {ev.email}
+                                            </a>
+                                        </b>
+                                    </p>
+                                </div>
+
+                                <div className="separator" />
+                            </div>
+                        ))}
+                    </div>
+                ) : (
+                    <div className="no-events">
+                        <h2>Termine werden bekannt gegeben.</h2>
+                    </div>
+                )}
+
+                {/* <div className="events">
                     <div className="event-info">
                         <p>
                             <b>Systemische Aufstellungsarbeit</b>{" "}
@@ -84,7 +162,7 @@ export default function Seminare() {
                             </b>
                         </p>
                     </div>
-                </div>
+                </div> */}
             </div>
         </main>
     );

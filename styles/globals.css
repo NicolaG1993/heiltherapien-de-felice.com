@@ -414,6 +414,10 @@ footer p:nth-child(2) {
     color: #37607b;
     /* color: var(--colorC); */
 }
+#Seminare .content > .events > .event {
+    width: 600px;
+    margin-bottom: 4rem;
+}
 #Seminare .content > .events a {
     color: #37607b;
     text-decoration: none;
