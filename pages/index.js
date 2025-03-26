@@ -42,9 +42,16 @@ export default function Home() {
                         Neurobiologie, Dr. Klinghardt – INK)
                     </li>
                     <li>
+                        Geprüfte INK-Therapeutin und Seminarleitung für ART und
+                        PK
+                    </li>
+                    <li>
                         Therapeutin für Systemische Familienaufstellung mit
                         erweitertem Zertifikat (Wieslocher Institut für
                         systemische Lösungen – WISL)
+                    </li>
+                    <li>
+                        <i>deltaCure</i> Praktizierende und Lehrerin
                     </li>
                 </ul>
                 <div className="quote-wrap">

@@ -2,16 +2,16 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Energiearbeit() {
+export default function DeltaCure() {
     return (
         <main id="Doc">
             <Head>
-                <title>Energiearbeit</title>
+                <title>deltaCure</title>
                 <meta property="og:type" content="website" />
-                <meta property="og:title" content="Energiearbeit" />
+                <meta property="og:title" content="deltaCure" />
             </Head>
 
-            <h1>Energiearbeit </h1>
+            <h1>deltaCure </h1>
             <div className="content">
                 <div>
                     <div
@@ -19,8 +19,8 @@ export default function Energiearbeit() {
                         style={{ marginBottom: "2rem" }}
                     >
                         <Image
-                            src={"/assets/chakras.png"}
-                            alt={"Energiearbeit "}
+                            src={"/assets/deltaCure.png"}
+                            alt={"deltaCure "}
                             fill
                             style={{
                                 objectFit: "contain",
@@ -28,10 +28,26 @@ export default function Energiearbeit() {
                         />
                     </div>
                     <p>
-                        Energiearbeit begleitet die Therapie. Sie bringt Körper,
-                        Geist und Seele ins Gleichgewicht, wirkt somit auf allen
-                        Ebenen. Wandlung und spirituelles Wachstum werden
-                        angestrebt
+                        Heilarbeit mit delta-Frequenzen auf tiefsten
+                        Schwingungsebenen
+                    </p>
+                    <p>
+                        <i>
+                            „Selbstheilungskräfte werden aktiviert mit Hilfe
+                            einer speziellen Meditationstechnik, danach
+                            begleiten uns delta-Frequenzen auf tiefsten
+                            Schwingungsebenen während des Schlafes. Die
+                            deltaCure®-Technik ist, anders als andere
+                            energetische Methoden, multidimensional; sie
+                            eröffnet ganzheitliche und auf allen Ebenen
+                            ansetzende, tiefgreifende Veränderungen mit dem
+                            Ziel, Frequenzen ins Gleichgewicht zu bringen und so
+                            grundlegende Disharmonien auf der Ebene von Körper,
+                            Geist und Seele zu beseitigen.“
+                        </i>
+                    </p>
+                    <p>
+                        <i>Simone Thomasetti-Freymann</i>
                     </p>
                     <p>
                         <strong>

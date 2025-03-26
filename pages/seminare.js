@@ -5,8 +5,8 @@ import Link from "next/link";
 const events = [
     {
         title: "Systemische Aufstellungsarbeit",
-        day: "Samstag",
-        date: "22.06.2024",
+        // day: "Samstag",
+        // date: "22.06.2024",
         location: {
             venue: "EPI Park Seminar",
             venueSubTitle: "Schweizerische Epilepsie-Stiftung",
@@ -19,8 +19,8 @@ const events = [
     },
     {
         title: "Systemische Aufstellungsarbeit",
-        day: "Sonntag",
-        date: "09.06.2024",
+        // day: "Sonntag",
+        // date: "09.06.2024",
         location: {
             venue: "Praxis für Gesundheitsfürsorge",
             building: "Simone Tomasetti-Freymann",
@@ -60,9 +60,9 @@ export default function Seminare() {
                                 <div className="event-info">
                                     <p>
                                         <b>{ev.title}</b>{" "}
-                                        <i>
+                                        {/* <i>
                                             am {ev.day}, den {ev.date}:
-                                        </i>
+                                        </i> */}
                                     </p>
                                     <div className="location">
                                         <p>Ort:</p>

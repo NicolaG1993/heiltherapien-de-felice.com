@@ -46,9 +46,7 @@ export default function Nav() {
                         <Link href="/therapien/systemische-familienaufstellung">
                             Systemische Familienaufstellung
                         </Link>
-                        <Link href="/therapien/energiearbeit">
-                            Energiearbeit
-                        </Link>
+                        <Link href="/therapien/deltacure">deltaCure</Link>
                     </div>
                 )}
             </nav>

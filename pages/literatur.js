@@ -74,6 +74,11 @@ export default function Literatur() {
                         </i>
                         , J. Kamphausen, Bielefeld 2010.
                     </li>
+                    <li>
+                        Dietrich Klinghardt, Ulrike Simona Grosch:{" "}
+                        <i>„Die 7 Faktoren.Was uns krank macht“</i>, 1.Auflage
+                        2023 Verlag: INK.
+                    </li>
                 </ul>
             </div>
         </main>

@@ -41,12 +41,7 @@ export default function Links() {
 
                 <div className="linkWrap">
                     {/* <p>Deutschland:</p> */}
-                    <a
-                        href="https://www.wieslocher-institut.com/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="caption-box"
-                    >
+                    <div className="caption-box">
                         <div>
                             <Image
                                 src={"/assets/wisl-logo.png"}
@@ -63,7 +58,7 @@ export default function Links() {
                         <span>
                             Wieslocher Institut für systemische Lösungen
                         </span>
-                    </a>
+                    </div>
                 </div>
             </div>
         </main>
