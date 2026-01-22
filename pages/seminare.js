@@ -2,6 +2,54 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
+const inkAutoResponseEvents = [
+    {
+        startDate: "13.03.2026",
+        endDate: "15.03.2026",
+        location: "Saarbrücken",
+        host: "Angelika De Felice",
+    },
+    {
+        startDate: "15.05.2026",
+        endDate: "17.05.2026",
+        location: "Bern",
+        host: "Angelika De Felice",
+    },
+    {
+        startDate: "04.09.2026",
+        endDate: "06.09.2026",
+        location: "Saarbrücken",
+        host: "Angelika De Felice",
+    },
+    {
+        startDate: "20.11.2026",
+        endDate: "22.11.2026",
+        location: "Bern",
+        host: "Angelika De Felice",
+    },
+];
+
+const inkPsychoKiEvents = [
+    {
+        startDate: "17.04.2026",
+        endDate: "19.04.2026",
+        location: "Saarbrücken",
+        host: "Angelika De Felice",
+    },
+    {
+        startDate: "12.06.2026",
+        endDate: "14.06.2026",
+        location: "Bern",
+        host: "Angelika De Felice",
+    },
+    {
+        startDate: "02.10.2026",
+        endDate: "04.10.2026",
+        location: "Saarbrücken",
+        host: "Angelika De Felice",
+    },
+];
+
 const events = [
     {
         title: "Systemische Aufstellungsarbeit",
@@ -40,6 +88,51 @@ export default function Seminare() {
                 <meta property="og:type" content="website" />
                 <meta property="og:title" content="Seminare" />
             </Head>
+
+            <h1>INK - Grundkurse 2026</h1>
+            <div className="content">
+                <div id="ink-events">
+                    <h3>Neue Seminarorte: Bern und Saarbrücken</h3>
+                    <div className="ink-events-list">
+                        <p className="ink-events-header">
+                            Autonomer Response Test I - ART I
+                        </p>
+                        {inkAutoResponseEvents.map((ev) => (
+                            <div
+                                key={"ink event ART I " + ev.date}
+                                className="ink-event"
+                            >
+                                <div className="event-date">
+                                    {ev.startDate} - {ev.endDate}
+                                </div>
+                                <div className="event-location">
+                                    {ev.location} ({ev.host})
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="ink-events-list">
+                        <p className="ink-events-header">
+                            Psycho-Kinesiologie I - PKI
+                        </p>
+                        {inkPsychoKiEvents.map((ev) => (
+                            <div
+                                key={"ink event PKI " + ev.date}
+                                className="ink-event"
+                            >
+                                <div className="event-date">
+                                    {ev.startDate} - {ev.endDate}
+                                </div>
+                                <div className="event-location">
+                                    {ev.location} ({ev.host})
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
+
             <h1>Seminare</h1>
             <div className="content">
                 <div>
