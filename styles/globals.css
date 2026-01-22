@@ -455,6 +455,14 @@ footer p:nth-child(2) {
     margin-bottom: 4rem;
     margin-top: 4rem;
 }
+#Seminare .content #ink-events a {
+    color: #37607b;
+    text-decoration: none;
+}
+#Seminare .content #ink-events a:hover {
+    color: #293131;
+    text-decoration: underline;
+}
 .ink-events-list {
     display: flex;
     flex-direction: column;
@@ -483,6 +491,13 @@ footer p:nth-child(2) {
 .ink-event > .event-location {
     font-size: 0.95rem;
     width: 250px;
+}
+
+.ink-events-note {
+    font-size: 0.85rem;
+    font-style: italic;
+    margin: 2rem 0;
+    color: #555f5f;
 }
 /**/
 

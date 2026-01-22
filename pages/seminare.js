@@ -130,6 +130,29 @@ export default function Seminare() {
                             </div>
                         ))}
                     </div>
+
+                    <div className="ink-events-note">
+                        <p>
+                            Weiterer Termine beim INK erfragen:{" "}
+                            <b>
+                                <a href="mailto:seminar@ink.ag">
+                                    seminar@ink.ag
+                                </a>
+                            </b>{" "}
+                            oder unter:{" "}
+                            <b>
+                                <a href="https://www.ink.ag/">www.ink.ag</a>
+                            </b>
+                        </p>
+                        <p>
+                            Anmeldung unter:{" "}
+                            <b>
+                                <a href="https://app1.edoobox.com/de/INK">
+                                    https://app1.edoobox.com/de/INK
+                                </a>
+                            </b>
+                        </p>
+                    </div>
                 </div>
             </div>
 
