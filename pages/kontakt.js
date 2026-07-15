@@ -58,54 +58,58 @@ export default function Kontakt() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         console.log("SUBMIT INVOKED");
-        Object.entries(formState).map(([key, value]) =>
-            validateData(key, value)
-        );
-        if (Object.keys(errors).length === 0) {
-            recaptchaRef.current.execute();
+        const newErrors = validateAll();
+        if (Object.keys(newErrors).length === 0) {
+            if (recaptchaRef.current && recaptchaRef.current.execute) {
+                recaptchaRef.current.execute();
+            } else {
+                // fallback: directly send if reCAPTCHA not available
+                sendEmail();
+            }
         }
     };
 
     const validateData = (key, value) => {
-        // e.preventDefault();
-        if (!value) {
-            value = "";
-        }
-        // validate data + setErrors
-        let newErrObj = errors;
-        if (key === "name") {
-            const resp = nameValidation("nome", value);
-            if (resp) {
-                newErrObj[key] = resp;
-            } else {
-                delete newErrObj[key];
+        if (!value) value = "";
+        setErrors((prev) => {
+            const next = { ...prev };
+            if (key === "name") {
+                const resp = nameValidation("nome", value);
+                if (resp) next[key] = resp;
+                else delete next[key];
             }
-        }
-        if (key === "email") {
-            const resp = emailValidation(value);
-            if (resp) {
-                newErrObj[key] = resp;
-            } else {
-                delete newErrObj[key];
+            if (key === "email") {
+                const resp = emailValidation(value);
+                if (resp) next[key] = resp;
+                else delete next[key];
             }
-        }
-        if (key === "betreff") {
-            const resp = titleValidation(key, value);
-            if (resp) {
-                newErrObj[key] = resp;
-            } else {
-                delete newErrObj[key];
+            if (key === "betreff") {
+                const resp = titleValidation(key, value);
+                if (resp) next[key] = resp;
+                else delete next[key];
             }
-        }
-        if (key === "inhalt") {
-            const resp = textValidation(value);
-            if (resp) {
-                newErrObj[key] = resp;
-            } else {
-                delete newErrObj[key];
+            if (key === "inhalt") {
+                const resp = textValidation(value);
+                if (resp) next[key] = resp;
+                else delete next[key];
             }
-        }
-        setErrors((prev) => ({ ...prev, ...newErrObj }));
+            return next;
+        });
+    };
+
+    const validateAll = () => {
+        const newErrObj = {};
+        const { name, email, betreff, inhalt } = formState;
+        const n = nameValidation("nome", name || "");
+        if (n) newErrObj.name = n;
+        const e = emailValidation(email || "");
+        if (e) newErrObj.email = e;
+        const b = titleValidation("betreff", betreff || "");
+        if (b) newErrObj.betreff = b;
+        const t = textValidation(inhalt || "");
+        if (t) newErrObj.inhalt = t;
+        setErrors(newErrObj);
+        return newErrObj;
     };
 
     const onReCAPTCHAChange = (captchaCode) => {
@@ -175,7 +179,9 @@ export default function Kontakt() {
                         <ReCAPTCHA
                             ref={recaptchaRef}
                             size="invisible"
-                            sitekey={process.env.RECAPTCHA_PUBLIC_KEY}
+                            sitekey={
+                                process.env.NEXT_PUBLIC_RECAPTCHA_PUBLIC_KEY
+                            }
                             onChange={onReCAPTCHAChange}
                             onBlur={(e) =>
                                 validateData(e.target.name, e.target.value)

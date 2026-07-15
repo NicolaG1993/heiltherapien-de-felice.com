@@ -1,13 +1,18 @@
-const aws = require("aws-sdk");
-const SES = new aws.SES({
-    accessKeyId: process.env.REACT_AWS_KEY,
-    secretAccessKey: process.env.REACT_AWS_SECRET,
-    region: "eu-central-1",
+import nodemailer from "nodemailer";
+
+const transporter = nodemailer.createTransport({
+    host: process.env.SMTP_HOST,
+    port: parseInt(process.env.SMTP_PORT || "587"),
+    secure: process.env.SMTP_SECURE === "true",
+    auth: {
+        user: process.env.SMTP_USER,
+        pass: process.env.SMTP_PASS,
+    },
 });
 
-export default SES;
+export default transporter;
 
-export function contactUs({
+export async function contactUs({
     recipient,
     source,
     email,
@@ -15,48 +20,28 @@ export function contactUs({
     subject,
     name,
 }) {
-    return SES.sendEmail({
-        Source: source,
-        // Source: recipient,
-        Destination: {
-            ToAddresses: [recipient],
-        },
-        Message: {
-            Body: {
-                Html: {
-                    Charset: "UTF-8",
-                    // Data: 'This message body contains HTML formatting. It can, for example, contain links like this one: <a class="ulink" href="http://docs.aws.amazon.com/ses/latest/DeveloperGuide" target="_blank">Amazon SES Developer Guide</a>.',
-                    Data: `<html>
-                                <body>
-                                    Name: ${name}
-                                    <br />
-                                    Email: ${email}
-                                    <br />
-                                    <br />
-                                    Inhalt: ${message}
-                                </body>
-                            </html>`,
-                },
-                Text: {
-                    Charset: "UTF-8",
-                    Data: "",
-                    // Data: message,
-                },
-            },
-            Subject: {
-                Charset: "UTF-8",
-                Data: subject,
-            },
-        },
-    })
-        .promise()
-        .then((res) => ({ ...res, emailSended: true }))
-        .catch((err) => {
-            console.log("err in ses.sendEmail: ", err);
-            return {
-                statusCode: 500,
-                body: `Message unsuccesfully sent, error: ${err}`,
-                error: err,
-            };
+    try {
+        const info = await transporter.sendMail({
+            from: source,
+            to: recipient,
+            subject: subject,
+            html: `<html>
+                <body>
+                    <p><strong>Name:</strong> ${name}</p>
+                    <p><strong>Email:</strong> ${email}</p>
+                    <p><strong>Message:</strong></p>
+                    <p>${message}</p>
+                </body>
+            </html>`,
         });
+        console.log("Email sent successfully:", info.messageId);
+        return { emailSended: true, messageId: info.messageId };
+    } catch (err) {
+        console.log("err in contactUs:", err);
+        return {
+            statusCode: 500,
+            body: `Message unsuccessfully sent, error: ${err.message}`,
+            error: err,
+        };
+    }
 }

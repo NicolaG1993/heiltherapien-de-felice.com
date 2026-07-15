@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "@next/font/google";
 
 export default function Home() {
     return (
@@ -61,6 +60,28 @@ export default function Home() {
                         Quelle aller Wissenschaft….“
                     </p>
                     <p>Albert Einstein</p>
+                </div>
+
+                <div className="video-section" aria-label="Video Vimeo">
+                    <a
+                        href="https://vimeo.com/ondemand/klinghardttalkcollection/1204677983"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <h3>
+                            🎙️ DonnersTalk: Dr. Klinghardt live in Kißlegg bei
+                            PK3 - Interview mit Angelika De Felice (26. Juni
+                            2026)
+                        </h3>
+                    </a>
+                    {/* <div className="video-box">
+                        <iframe
+                            src="https://player.vimeo.com/video/1204663476?h=1c874305ce"
+                            title="Vimeo video"
+                            allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                            allowFullScreen
+                        />
+                    </div> */}
                 </div>
             </div>
         </main>
